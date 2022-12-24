@@ -1,0 +1,2 @@
+- docker build -t prop/user:v1 -f user/Dockerfile .
+- docker-compose up -d

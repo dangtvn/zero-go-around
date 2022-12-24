@@ -1,0 +1,35 @@
+syntax = "v1"
+
+info(
+	title: "type title here"
+	desc: "type desc here"
+	author: "type author here"
+	email: "type email here"
+	version: "type version here"
+)
+
+type GetUserRequest {
+	// TODO: add members here and delete this comment
+}
+
+type GetUserReply {
+	// TODO: add members here and delete this comment
+}
+
+type CreateUserRequest {
+}
+
+type CreateUserReply {
+}
+
+@server(
+	jwt: Auth
+	group: template
+)
+service user-api {
+	@handler GetUserHandler // TODO: replace handler name and delete this comment
+	get /users/:userId (GetUserRequest) returns (GetUserReply)
+	
+	@handler CreateUserHandler // TODO: replace handler name and delete this comment
+	post /users (CreateUserRequest) returns (CreateUserReply)
+}
