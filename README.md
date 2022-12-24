@@ -1,2 +1,2 @@
-- docker build -t prop/user:v1 -f user/Dockerfile .
-- docker-compose up -d
+- goctl model mysql ddl -src rpc/sql/user.sql -dir ./rpc/model/user -c
+- sh deployment-shell.sh

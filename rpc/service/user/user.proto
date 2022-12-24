@@ -9,9 +9,9 @@ message CreateUserReq {
 }
 
 message CreateUserResp {
-  string greet = 1;
+  string name = 1;
 }
 
 service User {
-  rpc greet(CreateUserReq) returns (CreateUserResp);
+  rpc createUser(CreateUserReq) returns (CreateUserResp);
 }
